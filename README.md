@@ -36,19 +36,6 @@ Source: https://www.unb.ca/cic/datasets/ids-2017.html
 - Scaled features using `StandardScaler` (fit on training data only)
 - Balanced severe class imbalance using **SMOTE** (training set only)
 
-## Models Implemented
-Model                Decision Tree         Random Forest         XGBoost     
-|
- Accuracy               99.86%                 99.81%             99.85%  
-|
- Precision              99.87%                 99.82%             99.86%  
-|
- Recall                 99.86%                 99.81%             99.85% 
-| 
- F1-Score               99.86%                 99.81%             99.85%  
-
- Full comparison, confusion matrices, and per-class metrics available in `reports/`.
-
 ## Explainability
 
 SHAP's `TreeExplainer` is used to generate:
@@ -62,31 +49,7 @@ SHAP's `TreeExplainer` is used to generate:
 - View the prediction and a live SHAP explanation of the top contributing features
 - View the full model comparison table/chart from the sidebar
 
-## Project Structure
-AI-ML-project/
-│
-├── data/
-│ ├── raw/ # Original CICIDS2017 CSVs (not tracked in git)
-│ └── processed/ # Cleaned/split/SMOTE-balanced data (not tracked in git)
-│
-├── notebooks/
-│ ├── 01_eda.ipynb
-│ ├── 02_preprocessing.ipynb
-│ ├── 03_model_training.ipynb
-│ └── 04_shap_explainability.ipynb
-│
-├── models/ # Saved trained models, scaler, encoder, SHAP explainer
-├── app/
-│ ├── app.py # Streamlit application
-│ └── sample_traffic.csv
-├── reports/
-│ ├── figures/ # Confusion matrices, SHAP plots, comparison charts
-│ └── model_comparison.csv
-│
-├── requirements.txt
-└── README.md
-
-## ⚙️ How to Run Locally
+## How to Run Locally
 
 ```bash
 git clone https://github.com/NandiniGoel07/AI-ML-project.git
