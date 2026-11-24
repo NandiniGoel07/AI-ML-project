@@ -4,6 +4,8 @@ scikit-learn
 matplotlib
 seaborn
 shap
+numba
+llvmlite
 streamlit
 joblib
 imbalanced-learn
